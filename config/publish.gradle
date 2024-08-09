@@ -66,12 +66,12 @@ afterEvaluate {
                             url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                         }
                     }
-                    developers {
-                        developer {
-                            id = ext.ossrhUsername
-                            name = ext.ossrhUsername
-                        }
-                    }
+//                    developers {
+//                        developer {
+//                            id = ext.ossrhUsername
+//                            name = ext.ossrhUsername
+//                        }
+//                    }
                     scm {
                         url = ext.website
                         connection = ext.website
@@ -102,10 +102,10 @@ afterEvaluate {
                 def snapshotUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
                 url = version.toUpperCase().endsWith('SNAPSHOT') ? snapshotUrl : releasesUrl
 
-                credentials {
-                    username ossrhUsername
-                    password ossrhPassword
-                }
+//                credentials {
+//                    username ossrhUsername
+//                    password ossrhPassword
+//                }
             }
         }
     }
